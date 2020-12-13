@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Digit Recoognition</title>
+    <div class="topnav">
+      <a href="contact.html">Contact</a>
+      <a href="About_project.html">About Project</a>
+      <a href="index.html">Home</a>
+    </div>
+    <style>
+        #canvas {
+            border: 5px solid burlywood;
+        }
+
+    body {
+      background-image: url('arseny.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    .topnav a {
+      float: right;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    </style>
+    
+  </head>
+  <body>
+    <center>
+    <i><h1 style="text-align: center; color: #679b9b;border: 1px solid #ff9a76; margin-left: 500px; margin-right:500px; background-color: #ffeadb;">Digit Recognition App</h1></i>
+    <b><p id="prediction_text" style="border: 1px solid ghostwhite; background-color: lavenderblush; margin-left: 700px; margin-right:700px;" >Prediction : None</p></b>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <br><br>
+    
+    <button id='predict' type="button" style="box-shadow:black;">Predict</button>
+    <button id="clear" type="button" style="border-style: groove; box-sizing: border-box;">Clear</button>
+    </center>
+  
+    <style>
+      footer {
+          position: fixed;
+      text-align: center;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      background-color: DarkSalmon;
+      color: white;
+      }        
+      </style>
+              
+      <footer>
+        <p1>Author: Shivam Kumar</p1>
+        <p2><a href="mailto:shivamkumar70620@gmail.com">shivamkumar70620@gmail</a></p2>
+  
+      </footer>
+
+    <script src="draw.js"></script>
+    <script src="predict.js"></script>
+  </body>
+</html>
