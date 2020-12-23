@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handwritten Digit Recognition</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/0b512ab72d.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <style>
+         body{
+         
+           background-image: url('https://image.winudf.com/v2/image1/Y29tLmhkd2Nhci5zaGF0YW5iaXpoaV9zY3JlZW5fOF8xNTY3MDAwMjY5XzA3NQ/screen-8.jpg?fakeurl=1&type=.jpg');
+           opacity: 100%;
+           background-repeat: no-repeat;
+           -webkit-background-size: cover;
+           -moz-background-size: cover;
+           -o-background-size: cover;
+           background-size: cover;
+           background-position: center;
+           background-attachment: fixed;
+         }
+        
+         #canvas{
+            border: 1px solid;
+         }
+         #predict{
+           border: none;
+           width: 100px;
+           background: #25facf; 
+           font-size:large;
+           cursor: pointer;
+	         border-radius: 10px;
+          	transition: 0.5s;
+           
+         }
+         #predict:hover{
+           box-shadow: 5px 5px 10px 0px black;
+         }
+         #clear{
+           border: none;
+           width: 100px;
+           background:#cdbdf8;
+           font-size:large;
+           cursor: pointer;
+	         border-radius: 10px;
+          	transition: 0.5s;
+         }
+         #clear:hover{
+          box-shadow: 5px 5px 10px 0px black;
+          border:none;
+         }
+         h1{
+           text-align: center;
+           text-decoration: solid;
+           font-size: 35px;
+         }
+         
+         #prediction_text{
+           font-size: 30px;
+           font-weight: 500;
+         }
+        
+         .flex-container{
+           width: 680px;
+           height: 200px;
+           align-items: center;
+         }
+         .card{
+         
+           border-radius: 20px;
+           margin-left: 50%;
+           margin-top: 0px;
+           border: 3px solid black;
+         }
+         .card-body{
+           padding: 10px;
+         }
+    
+    </style>
+  </head>
+  <body>
+      <h1>Handwritten Digit Recognition App</h1> 
+      <hr style="width:100%;text-align:left;margin-left:0;height:5px;color: black;">
+      <br>
+      <center>
+     <div class="flex-container">
+      <div class="card" style="background: none">
+        <div class="card-header">
+          <center><h2 style="color: blanchedalmond;">Prediction Box</h2></center>
+        </div>
+        <div class="card-body">
+        <center>
+          <canvas id="canvas" class="canvas" width="300" height="300"></canvas>
+          <p id="prediction_text">Prediction:None</p>
+        
+          <button id="predict" type="button">Predict</button>
+          <button id="clear" type="button">Clear</button>
+        </center>
+        </div>
+      </div>
+    </div>
+  </center>
+  <!--div class="information" style="background-color:  #61b8f1;width: 30%;margin-left: 36px;opacity: 50%;">
+  <h2 style="text-align: left;margin-top: -130px;margin-left: 40px;margin-bottom: 250px;">draw a digit between 0 to 9 to get prediction</h2>
+</div-->
+
+<h2 style="text-align: left;margin-top: -140px;margin-left: 100px;margin-bottom: 230px;font-style: italic;color: rgba(215, 14, 241, 0.521);"><hr style="height: 5px;color: rgb(240, 6, 56);width: 20%;">draw a digit between 0 to 9 <br>  in box to get prediction<hr style="height: 5px;color: rgb(240, 6, 56);width: 20%;"></h2>
+
+
+    <!--canvas class="canvas" width="600" height="400" style="border: 5px solid red; margin-left: 700px; margin-top: -900px;">hii</canvas-->
+    <h2 style="font-size: 30px; margin-left: 20px;font-style: italic;color: rgb(10, 110, 241);">About Project</h2>
+    <hr style="width:30%;text-align:left;margin-left:12px;height:5px;color: rgb(33, 19, 231);">
+    <p style="margin-left: 20px;font-size: 20px;font-weight: 400;">This project is on Handwritten digit recognition between 0 to 9. <br>In this project ,the model used is deep learning model using CNN , Tensorflow and Keras Library. <br>After training and evaluating on MNIST dataset the model predict the digits between 0 to 9 with the accuracy of 98.94%. <br>Node.js is mainly used to build this app whereas the languages used is Javascript , Python .   </p>
+
+
+  <!-- Copyright -->
+  <!--div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="https://mdbootstrap.com/education/bootstrap/"> BIET</a>
+  </div-->
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+      <script src="draw.js"></script>
+      <script src="predict.js"></script>
+  </body>
+</html>
